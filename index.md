@@ -6,7 +6,7 @@
 - 点击'+'按钮
 - 名称随便填写，访问一栏选取'开发者'，如下图所示
 
-![7C5E58C4-6A11-4194-922B-07FEE281D7EF](https://user-images.githubusercontent.com/61855011/126485420-b88dc308-d94b-4102-8082-659dfd59df13.jpeg)
+![7C5E58C4-6A11-4194-922B-07FEE281D7EF](https://raw.githubusercontent.com/ty-yqs/Docs-for-AppStoreConnectAPI/gh-pages/assets/D0F730F1-6510-4706-A334-2E876BC807FD.jpeg)
 - 确认无误后点击创建按钮
 - 点击刚创建的证书对应的最右边'下载API密钥'按钮
 - 弹出的窗口中点击'下载'按钮，妥善保管下载的文件(文件名和文件内容不能修改)
