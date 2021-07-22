@@ -26,7 +26,6 @@
 | iss  | Issuer ID |
 | kid  | 密钥 ID   |
 
-
 - 返回格式: json
 - 返回参数:
 
