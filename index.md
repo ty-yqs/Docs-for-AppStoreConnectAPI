@@ -45,5 +45,4 @@
 
 - 返回格式: json
 - 返回参数:
-
 [https://developer.apple.com/documentation/appstoreconnectapi/register_a_new_device](https://developer.apple.com/documentation/appstoreconnectapi/register_a_new_device)
