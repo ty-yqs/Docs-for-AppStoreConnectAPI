@@ -33,6 +33,12 @@
 |-------|-------|
 | token | token |
 
+- 返回样例:
+```
+{
+    "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjcyMjRVN0pQUzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJ4eHh4eHh4IiwiZXhwIjoxNjI3MjE0Mzg1LCJhdWQiOiJhcHBzdG9yZWNvbm5lY3QtdjEifQ.x4rMjHnoc-VMMeFirJjo38RRkM0-d0HwBj41TR6oKhlJR4oY4z7k2PxUwBzM6-sFkoh7ueOIAvn_5iXNa3yFQA"
+}
+```
 ## 注册设备
 - 请求地址: /v1/RegisterNewDevice
 - 请求方式: GET
