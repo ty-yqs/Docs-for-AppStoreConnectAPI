@@ -85,3 +85,49 @@
     }
 }
 ```
+
+## 列出设备
+- 请求地址: /v1/ListDevices
+- 请求方式: GET
+- 请求参数:
+
+| 参数  | 值             |
+|-------|----------------|
+| token | token          |
+
+- 返回格式: application/json
+- 返回码:
+
+| 返回码 | 类型           | 解释                                     | 格式             |
+|--------|----------------|------------------------------------------|------------------|
+| 200    | DeviceResponse | OK.                                      | application/json |
+| 400    | ErrorResponse  | An error occurred with your request.     | application/json |
+| 403    | ErrorResponse  | Request not authorized.                  | application/json |
+
+- 返回样例:
+
+```
+{
+    "data":[
+        {
+            "type":"devices",
+            "id":"xxxxxx",
+            "attributes":{
+                "udid":"xxxxxx"
+            },
+            "links":{
+                "self":"https://api.appstoreconnect.apple.com/v1/devices/xxxxxx"
+            }
+        }
+    ],
+    "links":{
+        "self":"https://api.appstoreconnect.apple.com/v1/devices?fields%5Bdevices%5D=udid&limit=200"
+    },
+    "meta":{
+        "paging":{
+            "total":1,
+            "limit":200
+        }
+    }
+}
+```
