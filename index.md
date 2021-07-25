@@ -59,3 +59,29 @@
 | 400    | ErrorResponse  | An error occurred with your request.     | application/json |
 | 403    | ErrorResponse  | Request not authorized.                  | application/json |
 | 409    | ErrorResponse  | The provided resource data is not valid. | application/json |
+
+- 返回样例:
+
+```
+{
+    "data":{
+        "type":"devices",
+        "id":"xxx",
+        "attributes":{
+            "addedDate":"xxxx-xx-xxTxx:xx:xx.xxxxxxx",
+            "name":"xxx",
+            "deviceClass":"IPHONE",
+            "model":"iPhone X",
+            "udid":"xxx",
+            "platform":"IOS",
+            "status":"ENABLED"
+        },
+        "links":{
+            "self":"https://api.appstoreconnect.apple.com/v1/devices/xxx"
+        }
+    },
+    "links":{
+        "self":"https://api.appstoreconnect.apple.com/v1/devices"
+    }
+}
+```
