@@ -131,3 +131,86 @@
     }
 }
 ```
+
+## 注册BundleID
+- 请求地址: /v1/RegisterNewBundleID
+- 请求方式: GET
+- 请求参数:
+
+| 参数  | 值               |
+|-------|------------------|
+| token | token            |
+| bid   | BundleID的标识符 |
+| name  | BundleID的名字   |
+
+- 返回格式: application/json
+- 返回码:
+
+| 返回码 | 类型           | 解释                                     | 格式             |
+|--------|----------------|------------------------------------------|------------------|
+| 201    | DeviceResponse | Created.                                 | application/json |
+| 400    | ErrorResponse  | An error occurred with your request.     | application/json |
+| 403    | ErrorResponse  | Request not authorized.                  | application/json |
+| 409    | ErrorResponse  | The provided resource data is not valid. | application/json |
+
+- 返回样例:
+
+```
+{
+    "data":{
+        "type":"bundleIds",
+        "id":"xxxxxx",
+        "attributes":{
+            "name":"testbundleid",
+            "identifier":"xxx.xxx.xxx",
+            "platform":"UNIVERSAL",
+            "seedId":"xxxxxx"
+        },
+        "relationships":{
+            "bundleIdCapabilities":{
+                "meta":{
+                    "paging":{
+                        "total":0,
+                        "limit":xxx
+                    }
+                },
+                "data":[
+                    {
+                        "type":"bundleIdCapabilities",
+                        "id":"xxxxxx_GAME_CENTER"
+                    },
+                    {
+                        "type":"bundleIdCapabilities",
+                        "id":"xxxxxx_IN_APP_PURCHASE"
+                    }
+                ],
+                "links":{
+                    "self":"https://api.appstoreconnect.apple.com/v1/bundleIds/xxxxxx/relationships/bundleIdCapabilities",
+                    "related":"https://api.appstoreconnect.apple.com/v1/bundleIds/xxxxxx/bundleIdCapabilities"
+                }
+            },
+            "profiles":{
+                "meta":{
+                    "paging":{
+                        "total":0,
+                        "limit":xxx
+                    }
+                },
+                "data":[
+
+                ],
+                "links":{
+                    "self":"https://api.appstoreconnect.apple.com/v1/bundleIds/xxxxxx/relationships/profiles",
+                    "related":"https://api.appstoreconnect.apple.com/v1/bundleIds/xxxxxx/profiles"
+                }
+            }
+        },
+        "links":{
+            "self":"https://api.appstoreconnect.apple.com/v1/bundleIds/xxxxxx"
+        }
+    },
+    "links":{
+        "self":"https://api.appstoreconnect.apple.com/v1/bundleIds"
+    }
+}
+```
