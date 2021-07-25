@@ -44,4 +44,11 @@
 | udid  | 待注册设备UDID |
 
 - 返回格式: json
-- 返回参数: [https://developer.apple.com/documentation/appstoreconnectapi/register_a_new_device](https://developer.apple.com/documentation/appstoreconnectapi/register_a_new_device)
+- 状态码:
+
+| 状态码 | 类型           | 解释                                     | 格式             |
+|--------|----------------|------------------------------------------|------------------|
+| 201    | DeviceResponse | Created.                                 | application/json |
+| 400    | ErrorResponse  | An error occurred with your request.     | application/json |
+| 403    | ErrorResponse  | Request not authorized.                  | application/json |
+| 409    | ErrorResponse  | The provided resource data is not valid. | application/json |
