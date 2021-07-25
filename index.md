@@ -26,7 +26,7 @@
 | iss  | Issuer ID |
 | kid  | 密钥 ID   |
 
-- 返回格式: json
+- 返回格式: application/json
 - 返回参数:
 
 | 参数  | 值    |
@@ -43,10 +43,10 @@
 | token | token          |
 | udid  | 待注册设备UDID |
 
-- 返回格式: json
-- 状态码:
+- 返回格式: application/json
+- 返回码:
 
-| 状态码 | 类型           | 解释                                     | 格式             |
+| 返回码 | 类型           | 解释                                     | 格式             |
 |--------|----------------|------------------------------------------|------------------|
 | 201    | DeviceResponse | Created.                                 | application/json |
 | 400    | ErrorResponse  | An error occurred with your request.     | application/json |
