@@ -34,6 +34,7 @@
 | token | token |
 
 - 返回样例:
+
 ```
 {
     "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjcyMjRVN0pQUzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiI4YzJkMDBmOS0zYjlmLTQ5YTktYjFkMi0wOTliOTMwZWIxOTEiLCJleHAiOjE2MjcyMTQ0NTgsImF1ZCI6ImFwcHN0b3JlY29ubmVjdC12MSJ9.QVRiev2oFtozKfYD8CGredwcLHR-U7lmMhA8dBrw45_W43KEzQtTIJdUjg_rQShDyAwZOLqD2qvJwuCye8txiw"
