@@ -27,17 +27,19 @@
 | kid  | 密钥 ID   |
 
 - 返回格式: application/json
-- 返回参数:
+- 返回码:
 
-| 参数  | 值    |
-|-------|-------|
-| token | token |
+| 返回码 | 类型           | 解释                                     | 格式             |
+|--------|----------------|------------------------------------------|------------------|
+| 201    | TokenResponse | Created.                                 | application/json |
+| 409    | ErrorResponse  | The provided resource data is not valid. | application/json |
 
 - 返回样例:
 
 ```
 {
-    "token": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjcyMjRVN0pQUzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiI4YzJkMDBmOS0zYjlmLTQ5YTktYjFkMi0wOTliOTMwZWIxOTEiLCJleHAiOjE2MjcyMTQ0NTgsImF1ZCI6ImFwcHN0b3JlY29ubmVjdC12MSJ9.QVRiev2oFtozKfYD8CGredwcLHR-U7lmMhA8dBrw45_W43KEzQtTIJdUjg_rQShDyAwZOLqD2qvJwuCye8txiw"
+    "status":"200",
+    "token":"eyJhbGciOiJFUzI1NiIsImtpZCI6IjcyMjRVN0pQUzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJ4eHh4eCIsImV4cCI6MTYyNzMwMTg5MiwiYXVkIjoiYXBwc3RvcmVjb25uZWN0LXYxIn0.JrnpxKrV-LOJ8fuIVpiKfltXv0Kb-nS-pFgnDEoQwqdT5IAcGR0GhWjVkAiNWTLihkJlzdfAv5-qgZOqtCFsYg"
 }
 ```
 ## 注册设备
@@ -146,12 +148,12 @@
 - 返回格式: application/json
 - 返回码:
 
-| 返回码 | 类型           | 解释                                     | 格式             |
-|--------|----------------|------------------------------------------|------------------|
-| 201    | DeviceResponse | Created.                                 | application/json |
-| 400    | ErrorResponse  | An error occurred with your request.     | application/json |
-| 403    | ErrorResponse  | Request not authorized.                  | application/json |
-| 409    | ErrorResponse  | The provided resource data is not valid. | application/json |
+| 返回码 | 类型             | 解释                                     | 格式             |
+|--------|------------------|------------------------------------------|------------------|
+| 201    | BundleIdResponse | Created.                                 | application/json |
+| 400    | ErrorResponse    | An error occurred with your request.     | application/json |
+| 403    | ErrorResponse    | Request not authorized.                  | application/json |
+| 409    | ErrorResponse    | The provided resource data is not valid. | application/json |
 
 - 返回样例:
 
@@ -227,11 +229,11 @@
 - 返回格式: application/json
 - 返回码:
 
-| 返回码 | 类型           | 解释                                     | 格式             |
-|--------|----------------|------------------------------------------|------------------|
-| 200    | DeviceResponse | OK.                                 | application/json |
-| 400    | ErrorResponse  | An error occurred with your request.     | application/json |
-| 403    | ErrorResponse  | Request not authorized.                  | application/json |
+| 返回码 | 类型             | 解释                                     | 格式             |
+|--------|------------------|------------------------------------------|------------------|
+| 200    | BundleIdResponse | OK.                                 | application/json |
+| 400    | ErrorResponse    | An error occurred with your request.     | application/json |
+| 403    | ErrorResponse    | Request not authorized.                  | application/json |
 
 - 返回样例:
 
