@@ -214,3 +214,49 @@
     }
 }
 ```
+
+## 列出BundleID
+- 请求地址: /v1/ListBundleIDs
+- 请求方式: GET
+- 请求参数:
+
+| 参数  | 值               |
+|-------|------------------|
+| token | token            |
+
+- 返回格式: application/json
+- 返回码:
+
+| 返回码 | 类型           | 解释                                     | 格式             |
+|--------|----------------|------------------------------------------|------------------|
+| 200    | DeviceResponse | OK.                                 | application/json |
+| 400    | ErrorResponse  | An error occurred with your request.     | application/json |
+| 403    | ErrorResponse  | Request not authorized.                  | application/json |
+
+- 返回样例:
+
+```
+{
+    "data":[
+        {
+            "type":"bundleIds",
+            "id":"ZHR8XPJ5J4",
+            "attributes":{
+                "identifier":"com.ty.OldOS"
+            },
+            "links":{
+                "self":"https://api.appstoreconnect.apple.com/v1/bundleIds/ZHR8XPJ5J4"
+            }
+        }
+    ],
+    "links":{
+        "self":"https://api.appstoreconnect.apple.com/v1/bundleIds?fields%5BbundleIds%5D=identifier&limit=200"
+    },
+    "meta":{
+        "paging":{
+            "total":1,
+            "limit":200
+        }
+    }
+}
+```
