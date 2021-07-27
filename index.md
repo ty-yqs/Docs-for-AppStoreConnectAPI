@@ -262,3 +262,157 @@
     }
 }
 ```
+
+### 列出Apps
+- 请求地址: /v1/ListApps
+- 请求方式: GET
+- 请求参数:
+
+| 参数  | 值               |
+|-------|------------------|
+| token | token            |
+
+- 返回格式: application/json
+- 返回码:
+
+| 返回码 | 类型             | 解释                                     | 格式             |
+|--------|------------------|------------------------------------------|------------------|
+| 200    | BundleIdResponse | OK.                                 | application/json |
+| 400    | ErrorResponse    | An error occurred with your request.     | application/json |
+| 403    | ErrorResponse    | Request not authorized.                  | application/json |
+
+- 返回样例:
+
+```
+{
+    "data":[
+        {
+            "type":"apps",
+            "id":"xxx",
+            "attributes":{
+                "name":"xxx",
+                "bundleId":"com.xx.xxx",
+                "sku":"com.xx.xxx",
+                "primaryLocale":"zh-Hans",
+                "isOrEverWasMadeForKids":false,
+                "availableInNewTerritories":false,
+                "contentRightsDeclaration":null
+            },
+            "relationships":{
+                "ciProduct":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/ciProduct",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/ciProduct"
+                    }
+                },
+                "betaTesters":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/betaTesters"
+                    }
+                },
+                "betaGroups":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/betaGroups",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/betaGroups"
+                    }
+                },
+                "appStoreVersions":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/appStoreVersions",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/appStoreVersions"
+                    }
+                },
+                "preReleaseVersions":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/preReleaseVersions",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/preReleaseVersions"
+                    }
+                },
+                "betaAppLocalizations":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/betaAppLocalizations",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/betaAppLocalizations"
+                    }
+                },
+                "builds":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/builds",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/builds"
+                    }
+                },
+                "betaLicenseAgreement":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/betaLicenseAgreement",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/betaLicenseAgreement"
+                    }
+                },
+                "betaAppReviewDetail":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/betaAppReviewDetail",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/betaAppReviewDetail"
+                    }
+                },
+                "appInfos":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/appInfos",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/appInfos"
+                    }
+                },
+                "endUserLicenseAgreement":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/endUserLicenseAgreement",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/endUserLicenseAgreement"
+                    }
+                },
+                "preOrder":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/preOrder",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/preOrder"
+                    }
+                },
+                "prices":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/prices",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/prices"
+                    }
+                },
+                "availableTerritories":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/availableTerritories",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/availableTerritories"
+                    }
+                },
+                "inAppPurchases":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/inAppPurchases",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/inAppPurchases"
+                    }
+                },
+                "gameCenterEnabledVersions":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx/relationships/gameCenterEnabledVersions",
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/gameCenterEnabledVersions"
+                    }
+                },
+                "perfPowerMetrics":{
+                    "links":{
+                        "related":"https://api.appstoreconnect.apple.com/v1/apps/xxx/perfPowerMetrics"
+                    }
+                }
+            },
+            "links":{
+                "self":"https://api.appstoreconnect.apple.com/v1/apps/xxx"
+            }
+        }
+    ],
+    "links":{
+        "self":"https://api.appstoreconnect.apple.com/v1/apps"
+    },
+    "meta":{
+        "paging":{
+            "total":1,
+            "limit":50
+        }
+    }
+}
+```
