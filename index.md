@@ -16,7 +16,7 @@
 - 在跳转的页面中核对文件名是否为上传时的文件名
 - 成功上传AuthKey文件
 
-## 获取Token
+### 获取Token
 - 请求地址: /v1/GetToken
 - 请求方式: GET
 - 请求参数:
@@ -42,7 +42,7 @@
     "token":"eyJhbGciOiJFUzI1NiIsImtpZCI6IjcyMjRVN0pQUzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJ4eHh4eCIsImV4cCI6MTYyNzMwMTg5MiwiYXVkIjoiYXBwc3RvcmVjb25uZWN0LXYxIn0.JrnpxKrV-LOJ8fuIVpiKfltXv0Kb-nS-pFgnDEoQwqdT5IAcGR0GhWjVkAiNWTLihkJlzdfAv5-qgZOqtCFsYg"
 }
 ```
-## 注册设备
+### 注册设备
 - 请求地址: /v1/RegisterNewDevice
 - 请求方式: GET
 - 请求参数:
@@ -88,7 +88,7 @@
 }
 ```
 
-## 列出设备
+### 列出设备
 - 请求地址: /v1/ListDevices
 - 请求方式: GET
 - 请求参数:
@@ -134,7 +134,7 @@
 }
 ```
 
-## 注册BundleID
+### 注册BundleID
 - 请求地址: /v1/RegisterNewBundleID
 - 请求方式: GET
 - 请求参数:
@@ -217,7 +217,7 @@
 }
 ```
 
-## 列出BundleID
+### 列出BundleID
 - 请求地址: /v1/ListBundleIDs
 - 请求方式: GET
 - 请求参数:
