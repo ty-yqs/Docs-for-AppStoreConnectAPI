@@ -429,11 +429,11 @@
 - 返回格式: application/json
 - 返回码:
 
-| 返回码 | 类型           | 解释                                     | 格式             |
-|--------|----------------|------------------------------------------|------------------|
-| 200    | DeviceResponse | OK.                                      | application/json |
-| 400    | ErrorResponse  | An error occurred with your request.     | application/json |
-| 403    | ErrorResponse  | Request not authorized.                  | application/json |
+| 返回码 | 类型                 | 解释                                     | 格式             |
+|--------|----------------------|------------------------------------------|------------------|
+| 200    | CertificatesResponse | OK.                                      | application/json |
+| 400    | ErrorResponse        | An error occurred with your request.     | application/json |
+| 403    | ErrorResponse        | Request not authorized.                  | application/json |
 
 - 返回样例:
 
