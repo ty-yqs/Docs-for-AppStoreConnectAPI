@@ -416,3 +416,64 @@
     }
 }
 ```
+
+### 列出证书
+- 请求地址: /v1/ListCertifications
+- 请求方式: GET
+- 请求参数:
+
+| 参数  | 值             |
+|-------|----------------|
+| token | token          |
+
+- 返回格式: application/json
+- 返回码:
+
+| 返回码 | 类型           | 解释                                     | 格式             |
+|--------|----------------|------------------------------------------|------------------|
+| 200    | DeviceResponse | OK.                                      | application/json |
+| 400    | ErrorResponse  | An error occurred with your request.     | application/json |
+| 403    | ErrorResponse  | Request not authorized.                  | application/json |
+
+- 返回样例:
+
+```
+{
+    "data":[
+        {
+            "type":"certificates",
+            "id":"xxx",
+            "attributes":{
+                "serialNumber":"xxx",
+                "certificateContent":"xxx",
+                "displayName":"xxx",
+                "name":"Apple Development: xxx",
+                "csrContent":null,
+                "platform":null,
+                "expirationDate":"xxxx-xx-xxTxx:xx:xx.xxx+xxxx",
+                "certificateType":"DEVELOPMENT"
+            },
+            "relationships":{
+                "passTypeId":{
+                    "links":{
+                        "self":"https://api.appstoreconnect.apple.com/v1/certificates/xxx/relationships/passTypeId",
+                        "related":"https://api.appstoreconnect.apple.com/v1/certificates/xxx/passTypeId"
+                    }
+                }
+            },
+            "links":{
+                "self":"https://api.appstoreconnect.apple.com/v1/certificates/xxx"
+            }
+        }
+    ],
+    "links":{
+        "self":"https://api.appstoreconnect.apple.com/v1/certificates?limit=200"
+    },
+    "meta":{
+        "paging":{
+            "total":1,
+            "limit":200
+        }
+    }
+}
+```
