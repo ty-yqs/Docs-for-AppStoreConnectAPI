@@ -39,7 +39,8 @@
 ```
 {
     "status":"200",
-    "token":"eyJhbGciOiJFUzI1NiIsImtpZCI6IjcyMjRVN0pQUzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJ4eHh4eCIsImV4cCI6MTYyNzMwMTg5MiwiYXVkIjoiYXBwc3RvcmVjb25uZWN0LXYxIn0.JrnpxKrV-LOJ8fuIVpiKfltXv0Kb-nS-pFgnDEoQwqdT5IAcGR0GhWjVkAiNWTLihkJlzdfAv5-qgZOqtCFsYg"
+    "expiration":xxx,
+    "token":"xxx.xxx.xxx"
 }
 ```
 ### 注册设备
