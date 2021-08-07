@@ -478,30 +478,3 @@
     }
 }
 ```
-
-### 注册BundleID
-- 请求地址: /v1/RegisterNewBundleID
-- 请求方式: GET
-- 请求参数:
-
-| 参数         | 值              |
-| -------------- | ---------------- |
-| token          | token            |
-| bid            | BundleID的标识符 |
-| capabilityType | 需要添加的能力 |
-
-- 返回格式: application/json
-- 返回码:
-
-| 返回码 | 类型             | 解释                                     | 格式             |
-|--------|------------------|------------------------------------------|------------------|
-| 201    | BundleIdResponse | Created.                                 | application/json |
-| 400    | ErrorResponse    | An error occurred with your request.     | application/json |
-| 403    | ErrorResponse    | Request not authorized.                  | application/json |
-| 409    | ErrorResponse    | The provided resource data is not valid. | application/json |
-
-- 返回样例:
-
-```
-
-```
